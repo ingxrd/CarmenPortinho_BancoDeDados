@@ -7,47 +7,38 @@ cursor = conexao.cursor()
 
 # Cria a tabela da classe "cliente"
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS clientes 
-    (id_cliente INT PRIMARY KEY,
-    nome VARCHAR(100),
+    CREATE TABLE IF NOT EXISTS Clientes 
+    (id_cliente INT PRIMARY KEY NOT NULL,
+    nome VARCHAR(100) NOT NULL,
     telefone VARCHAR(100),
     endereco VARCHAR(150))
 ''')
 
-# Confirma as mudanças no banco de dados
-conexao.commit()
-
 
 # Cria a tabela da classe "fornecedor"
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS fornecedores 
-    (id_fornecedor INT PRIMARY KEY,
-    nome VARCHAR(100),
+    CREATE TABLE IF NOT EXISTS Fornecedores 
+    (id_fornecedor INT PRIMARY KEY NOT NULL,
+    nome VARCHAR(100) NOT NULL,
     cnpj VARCHAR(14),
     endereco VARCHAR(150))
 ''')
 
-# Confirma as mudanças no banco de dados
-conexao.commit()
-
-
 # Cria a tabela da classe "produto"
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS produtos 
-    (id_produto INT PRIMARY KEY,
-    nome_produto VARCHAR(100),
+    CREATE TABLE IF NOT EXISTS Produtos 
+    (id_produto INT PRIMARY KEY NOT NULL,
+    nome_produto VARCHAR(100) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
     categoria VARCHAR(100),
     quantidade_estoque INT)
 ''')
 
-# Confirma as mudanças no banco de dados
-conexao.commit()
-
 
 # Cria a tabela da classe "transacao"
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS transacoes 
-    (id_transacao INT PRIMARY KEY,
+    CREATE TABLE IF NOT EXISTS Transacoes 
+    (id_transacao INT PRIMARY KEY NOT NULL,
     quantidade_estoque INT,
     data_hora TIMESTAMP,
     cliente_id INT,

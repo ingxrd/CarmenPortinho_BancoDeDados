@@ -22,5 +22,7 @@ cursor.execute('PRAGMA foreign_keys = ON;')
 
 # Insert tabela da classe "transacao"
 
+# print(cursor.fetchall())
+
 conexao.commit()
 conexao.close()

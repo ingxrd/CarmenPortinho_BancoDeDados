@@ -44,14 +44,17 @@ cursor.execute('''
     cliente_id INT,
     produto_id INT,
     fornecedor_id INT,
-    FOREIGN KEY (cliente_id) REFERENCES clientes (id_cliente), 
-    FOREIGN KEY (produto_id) REFERENCES clientes (id_produto), 
-    FOREIGN KEY (fornecedor_id) REFERENCES clientes (id_fornecedor)) 
+    FOREIGN KEY (cliente_id) REFERENCES Clientes (id_cliente), 
+    FOREIGN KEY (produto_id) REFERENCES Produtos (id_produto), 
+    FOREIGN KEY (fornecedor_id) REFERENCES Fornecedores (id_fornecedor)) 
 ''')
 
 
 # Confirma as mudanças no banco de dados
 conexao.commit()
+
+
+
 
 # Fecha a conexão com o banco de dados
 conexao.close()

@@ -2,9 +2,11 @@ import sqlite3
 
 conexao = sqlite3.connect(r'banco_mercado.db')
 cursor = conexao.cursor()
+#cursor.execute("INSERT INTO Transacoes(cliente_id, produto_id, quantidade_estoque) VALUES  (1, 1, 1) ")
+
 
 # Ativando as chaves estrangeiras (foreign keys)
-cursor.execute('PRAGMA foreign_keys = ON;')
+#cursor.execute('PRAGMA foreign_keys = ON;')
 
 
 # Insert tabela da classe "cliente"
@@ -21,6 +23,7 @@ cursor.execute('PRAGMA foreign_keys = ON;')
 # cursor.execute("INSERT INTO Produtos(id_produto, nome_produto, preco, categoria, quantidade_estoque) VALUES (4, 'Nintendo Switch', 1800.00, 'Eletronico', 40)")
 
 # Insert tabela da classe "transacao"
+#cursor.execute("INSERT INTO Transacoes(cliente_id, produto_id, quantidade_estoque) VALUES  (1, 1, 1) ")
 
 conexao.commit()
 conexao.close()

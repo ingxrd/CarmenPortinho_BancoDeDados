@@ -21,8 +21,13 @@ cursor.execute('PRAGMA foreign_keys = ON;')
 # cursor.execute("INSERT INTO Produtos(id_produto, nome_produto, preco, categoria, quantidade_estoque) VALUES (4, 'Nintendo Switch', 1800.00, 'Eletronico', 40)")
 
 # Insert tabela da classe "transacao"
+cursor.execute("INSERT INTO Transacoes(cliente_id, produto_id, quantidade_estoque) VALUES  (1, 1, 1) ")
+cursor.execute("INSERT INTO Transacoes(cliente_id, produto_id, quantidade_estoque) VALUES  (2, 2, 2) ")
+cursor.execute("INSERT INTO Transacoes(cliente_id, produto_id, quantidade_estoque) VALUES  (3, 3, 3) ")
 
-# print(cursor.fetchall())
+
+
+
 
 conexao.commit()
 conexao.close()

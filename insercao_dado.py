@@ -21,9 +21,9 @@ cursor.execute('PRAGMA foreign_keys = ON;')
 # cursor.execute("INSERT INTO Produtos(id_produto, nome_produto, preco, categoria, quantidade_estoque) VALUES (4, 'Nintendo Switch', 1800.00, 'Eletronico', 40)")
 
 # Insert tabela da classe "transacao"
-cursor.execute("INSERT INTO Transacoes(cliente_id, produto_id, quantidade_estoque) VALUES  (1, 1, 1) ")
-cursor.execute("INSERT INTO Transacoes(cliente_id, produto_id, quantidade_estoque) VALUES  (2, 2, 2) ")
-cursor.execute("INSERT INTO Transacoes(cliente_id, produto_id, quantidade_estoque) VALUES  (3, 3, 3) ")
+cursor.execute("INSERT INTO Transacoes(id_transacao, quantidade_estoque, data_hora, cliente_id, produto_id) VALUES  (1, 3, '2024-08-24 12:3200:00', 1, 1) ")
+cursor.execute("INSERT INTO Transacoes(id_transacao, quantidade_estoque, data_hora, cliente_id, produto_id) VALUES  (2, 2, '2024-08-24 12:3200:00', 1, 2)")
+cursor.execute("INSERT INTO Transacoes(id_transacao, quantidade_estoque, data_hora, cliente_id, produto_id) VALUES  (3, 3, '2024-08-24 12:3200:00', 3, 3) ")
 
 
 

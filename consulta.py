@@ -16,7 +16,7 @@ for produto in dados:
 #Encontrar as vendas realizadas por um cliente específico.
 dados2 = cursor.execute('SELECT * FROM transacoes WHERE cliente_id = 1;')
 for transacao in dados2:
-    print(f'Vendas realizadas: {transacao}')
+    print(f'Vendas do cliente: {transacao}')
 
 #Calcular o total de vendas por categoria de produto.
 
